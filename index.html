@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">
+        <!-- <img src="./assets/graph.png" height="80px" width="80px" alt="logo" /> -->
+      </div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about-me">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">My Journey</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Divya</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about-me" onclick="toggleMenu()">About</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#education" onclick="toggleMenu()">My Journey</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="about-me">
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="./assets/profile-pic.jpg" alt="Divya Gariga profile picture" style="border-radius: 3rem" />
+        </div>
+        <div class="section__text">
+          <p class="section__text__p1">Hello, I'm</p>
+          <h1 class="title">Divya Gariga</h1>
+          <br />
+          <p class="section__text__p2">a Software Engineer</p>
+          <p class="section_summary">
+            Welcome to My Portfolio!<br />
+            I’m glad you’re here! This space showcases my journey, skills, and projects in Software Development.<br />
+            Feel free to explore my work!
+          </p>
+          <div id="skills-container">
+            <i class="fab fa-react" style="font-size: 40px; color: #81838f"></i>
+            <i class="fab fa-js-square" style="font-size: 40px; color: #81838f"></i>
+            <i class="fab fa-java" style="font-size: 40px; color: #81838f"></i>
+            <img src="assets/grey_Spring_Boot.png" alt="Spring Boot Logo" style="height: 40px" />
+            <i class="fab fa-aws" style="font-size: 40px; color: #81838f"></i>
+          </div>
+          <br />
+          <div class="btn-container">
+            <button class="btn btn-color-2" onclick="window.open('./assets/divya-gariga.pdf')">
+              Download CV
+            </button>
+            <button class="btn btn-color-1" onclick="location.href='./#contact'">
+              Contact Info
+            </button>
+          </div>
+          <div id="socials-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="My LinkedIn profile"
+              class="icon"
+              onclick="location.href='https://www.linkedin.com/in/divya-gariga'"
+            />
+            <img
+              src="./assets/github.png"
+              alt="My Github profile"
+              class="icon"
+              onclick="location.href='https://github.com/divya-gariga'"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skills and Certifications</h1>
+      <div class="skills-grid">
+        <div class="card">
+          <div class="card-header">
+            <div class="skill-icon"><i class="fab fa-react"></i></div>
+            <h3>Frontend Skills</h3>
+          </div>
+          <div class="card-content">
+            <div class="card-details">
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>React</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="skill-icon"><i class="fab fa-java"></i></div>
+            <h3>Backend Skills</h3>
+          </div>
+          <div class="card-content">
+            <div class="card-details">
+              <ul>
+                <li>Spring Boot</li>
+                <li>Java</li>
+                <li>Node.js</li>
+                <li>Python</li>
+                <li>RESTful APIs</li>
+                <li>GraphQL</li>
+                <li>gRPC</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="skill-icon"><i class="fab fa-docker"></i></div>
+            <h3>Tools</h3>
+          </div>
+          <div class="card-content">
+            <div class="card-details">
+              <ul>
+                <li>Git</li>
+                <li>AWS</li>
+                <li>Docker</li>
+                <li>Kubernetes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="skill-icon"><i class="fas fa-database"></i></div>
+            <h3>Database Skills</h3>
+          </div>
+          <div class="card-content">
+            <div class="card-details">
+              <ul>
+                <li>MongoDB</li>
+                <li>MySQL</li>
+                <li>PostgreSQL</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="skill-icon"><i class="fas fa-certificate"></i></div>
+            <h3>Certifications</h3>
+          </div>
+          <div class="card-content">
+            <div class="card-details">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.credly.com/badges/6b38a826-2119-42c4-827e-20324bc33c1a/linked_in_profile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    
+                  >
+                    AWS Certified Cloud Practitioner
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h1 class="title">Experience</h1>
+      <div class="experience-container">
+        <div class="experience-card">
+          <div class="card-front">
+            <img src="./assets/adp-logo.png" alt="ADP Logo" class="company-logo" />
+            <h2>Software Engineer</h2>
+          </div>
+          <div class="card-back">
+            <h3 class="job-title">Member Technical</h3>
+            <p class="job-duration">August 2021 - January 2022</p>
+            <p class="job-location">Hyderabad, Telangana</p>
+            <ul class="experience-list">
+              <li>Developed backend services using Java, Spring Boot</li>
+              <li>Designed MySQL database schemas with Hibernate</li>
+              <li>Built microservices architecture with Spring Boot</li>
+              <li>Implemented OAuth2 and JWT authentication</li>
+            </ul>
+          </div>
+        </div>
+        <div class="experience-card">
+          <div class="card-front">
+            <img src="./assets/zemoso-logo.png" alt="Internship Logo" class="company-logo" />
+            <h2>Intern</h2>
+          </div>
+          <div class="card-back">
+            <h3 class="job-title">Software Engineer Intern</h3>
+            <p class="job-duration">January 2022 - February 2022</p>
+            <ul class="experience-list">
+              <li>Built responsive bookstore application using React</li>
+              <li>Developed RESTful APIs with Spring Boot</li>
+              <li>Managed MySQL database interactions</li>
+            </ul>
+          </div>
+        </div>
+        <div class="experience-card">
+          <div class="card-front">
+            <img src="./assets/zemoso-logo.png" alt="Zemoso Technologies Logo" class="company-logo" />
+            <h2>Software Engineer I</h2>
+          </div>
+          <div class="card-back">
+            <h3 class="job-title">Software Engineer - I</h3>
+            <p class="job-duration">March 2022 - December 2023</p>
+            <p class="job-location">Hyderabad, Telangana</p>
+            <ul class="experience-list">
+              <li>Developed 30+ reusable React components using Atomic Architecture</li>
+              <li>Designed RESTful APIs with Spring Boot</li>
+              <li>Automated SDK documentation generation across 7 languages</li>
+              <li>Deployed containerized applications on AWS EKS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h1 class="title">My Journey</h1>
+      <div class="timeline">
+        <ul class="timeline-list">
+          <li>
+            <div class="date">August 2017 - July 2021</div>
+            <div class="marker"></div>
+            <div class="content">
+              <h3>Bachelor's of Technology, Computer Science & Engineering</h3>
+              <p>Vidya Jyothi Institute of Technology, Hyderabad, Telangana</p>
+            </div>
+          </li>
+          <li>
+            <div class="date">August 2021 - January 2022</div>
+            <div class="marker"></div>
+            <div class="content">
+              <h3>Member Technical at ADP</h3>
+              <p>Hyderabad, India</p>
+            </div>
+          </li>
+          <li>
+            <div class="date">January 2022 - February 2022</div>
+            <div class="marker"></div>
+            <div class="content">
+              <h3>Internship at Zemoso Technologies</h3>
+              <p>Hyderabad, India</p>
+            </div>
+          </li>
+          <li>
+            <div class="date">March 2022 - December 2023</div>
+            <div class="marker"></div>
+            <div class="content">
+              <h3>Software Engineer - I at Zemoso Technologies</h3>
+              <p>Hyderabad, India</p>
+            </div>
+          </li>
+          <li>
+            <div class="date">January 2024 - Expected Graduation, May 2025</div>
+            <div class="marker"></div>
+            <div class="content">
+              <h3>M.S. in Computer Science (Ongoing)</h3>
+              <p>University of Alabama at Birmingham, Birmingham, AL</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:divya.gariga369@gmail.com">divya.gariga369@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+          <p><a href="https://www.linkedin.com/in/divya-gariga">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Copyright © 2023 Divya Gariga. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
