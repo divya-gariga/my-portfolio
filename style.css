@@ -518,13 +518,13 @@ section {
   overflow-y: auto;
 }
 
-.experience-card:hover .card-front {
+/* .experience-card:hover .card-front {
   transform: rotateY(-180deg);
 }
 
 .experience-card:hover .card-back {
   transform: rotateY(0deg);
-}
+} */
 
 .company-logo {
   width: 150px;
